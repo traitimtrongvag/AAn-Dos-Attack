@@ -51,19 +51,20 @@ Use it responsibly and follow your local laws.
 Setup
 
 Termux
-
+```bash
 git clone https://github.com/traitimtrongvag/AAn-Ddos-Attack.git
 cd AAn-Ddos-Attack
 pkg update
 pkg install git python -y
 pip install pystyle rich
 python ddosv2.py
-
+```
 Linux
-
+```bash
 git clone https://github.com/traitimtrongvag/AAn-Ddos-Attack.git
 cd AAn-Ddos-Attack
 sudo apt update
 sudo apt install git python3 python3-pip -y
 pip install pystyle rich
 python ddosv2.py
+```
