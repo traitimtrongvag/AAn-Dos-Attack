@@ -1,56 +1,69 @@
-# AAn-Ddos-Attack
-# DDoS (Distributed Denial of Service) dành cho mục đích học tập
+AAn‑DoS‑Attack
 
-DDoS (Distributed Denial of Service) là một hình thức tấn công mạng nhằm làm gián đoạn hoặc ngừng hoạt động của một dịch vụ trực tuyến bằng cách gửi lượng lớn yêu cầu tới máy chủ mục tiêu, khiến hệ thống không thể xử lý hết và từ chối các yêu cầu hợp pháp. Tấn công DDoS thường được thực hiện thông qua một mạng lưới các thiết bị bị chiếm đoạt (botnet) và có thể gây ảnh hưởng nghiêm trọng đến tính khả dụng của các dịch vụ trên Internet.
+For Educational and Testing Purposes Only
 
-# Mục đích tham khảo:
-
-Tìm hiểu về cơ chế hoạt động của các tấn công DDoS: Việc hiểu rõ cách thức tấn công DDoS giúp các chuyên gia an ninh mạng xây dựng các giải pháp phòng chống hiệu quả.
-
-Xây dựng kỹ năng phân tích và phát hiện tấn công DDoS: Việc hiểu và mô phỏng các cuộc tấn công DDoS giúp phân tích các dấu hiệu và biện pháp phòng ngừa.
-
-Lập trình và mô phỏng: Tạo ra các công cụ mô phỏng tấn công DDoS nhỏ để học cách triển khai và phòng chống tấn công mạng.
+This project demonstrates a basic DoS (Denial of Service) traffic generator.
+It is not a DDoS tool. A DoS attack comes from a single machine, while a DDoS attack involves many distributed devices.
+This project is only intended for learning and controlled testing.
 
 
-# Lưu ý quan trọng:
+---
 
-Mục đích tham khảo hợp pháp: Việc tham khảo hoặc nghiên cứu về DDoS chỉ nên được thực hiện trong môi trường kiểm thử hoặc với sự cho phép của chủ sở hữu hệ thống. Mọi hành động tấn công mạng mà không có sự cho phép là bất hợp pháp và có thể dẫn đến hậu quả nghiêm trọng.
+Purpose of This Project
 
-Chưa cài Proxy: Các cuộc tấn công DDoS thường được thực hiện qua nhiều máy tính hoặc thiết bị khác nhau (botnet), nhưng nếu chưa cài proxy hoặc không sử dụng các biện pháp ẩn danh, tấn công có thể dễ dàng bị phát hiện và truy vết đến nguồn gốc. Điều này có thể dẫn đến việc bị chặn IP hoặc bị phát hiện nhanh chóng.
+Understanding how basic DoS traffic works
+Learn the fundamentals of network flooding and how services behave under stress.
 
+Training analysis and detection skills
+Useful for studying logs, patterns, and signs of DoS‑like traffic in a safe environment.
 
-Các công cụ DDoS cơ bản (chỉ dùng để tham khảo trong môi trường hợp pháp):
-
-1. LOIC (Low Orbit Ion Cannon): Một công cụ phổ biến cho tấn công DDoS, thường được dùng để thực hiện tấn công DoS đơn giản với giao diện người dùng dễ sử dụng.
-
-
-2. Hping3: Công cụ này có thể được sử dụng để gửi các gói TCP/IP tùy chỉnh, từ đó thực hiện các cuộc tấn công DDoS như SYN flood.
-
-
-3. Slowloris: Một công cụ được sử dụng để tấn công DDoS bằng cách giữ kết nối HTTP mở lâu dài, làm cạn kiệt tài nguyên của máy chủ.
+Programming & simulation
+A simple environment to experiment with traffic generation and defensive concepts.
 
 
+---
 
-Lưu ý về bảo mật: Việc tìm hiểu DDoS rất quan trọng trong an ninh mạng, nhưng hãy luôn chắc chắn rằng bạn chỉ thực hiện thử nghiệm trong môi trường kiểm tra, không xâm phạm hệ thống của người khác mà không có sự đồng ý.
+Important Warnings
 
-Hãy luôn tuân thủ các quy định về pháp lý khi nghiên cứu và thử nghiệm các kỹ thuật này.
+Legal Notice
+Running DoS attacks on systems you do not own or do not have explicit permission to test is illegal.
+The authors are not responsible for any misuse.
+
+No Proxy / No Anonymity
+This tool sends traffic directly from your machine.
+Your real IP is visible if used outside a controlled environment.
+
+Use Only in Test Environments
+Do not run this tool on public servers or networks without authorization.
 
 
-# Tuyên bố miễn trừ trách nhiệm
-Dự án này là bằng chứng về khái niệm cho mục đích thử nghiệm và giáo dục.
-nó không được thiết kế hoặc xây dựng cho mục đích đó. Lỗi có thể xảy ra!
+---
 
-Chỉ sử dụng nó với mục đích giáo dục!
-Vui lòng kiểm tra các quy định pháp lý tại quốc gia của bạn trước khi sử dụng.
-Chúng tôi không chịu bất kỳ trách nhiệm nào về những gì bạn làm với chương trình này.
-# Setup
-Termux 
-```bash
-git clone https://github.com/traitimtrongvag/AAn-Ddos-Attack.git && cd AAn-Ddos-Attack && pkg update && pkg install git python -y && pip install pystyle rich && python ddosv2.py
-```
+Disclaimer
+
+This project is a proof‑of‑concept.
+It may contain bugs and is not meant for real attacks.
+Use it responsibly and follow your local laws.
+
+
+---
+
+Setup
+
+Termux
+
+git clone https://github.com/traitimtrongvag/AAn-Ddos-Attack.git
+cd AAn-Ddos-Attack
+pkg update
+pkg install git python -y
+pip install pystyle rich
+python ddosv2.py
+
 Linux
-```bash
-git clone https://github.com/traitimtrongvag/AAn-Ddos-Attack.git && cd AAn-Ddos-Attack && sudo apt update && sudo apt install git python3 python3-pip -y && pip install pystyle rich && python ddosv2.py
-```
-# Picture
-![Screenshot](https://github.com/traitimtrongvag/Pic/blob/main/Screenshot_20241230_231009_Termux.jpg?raw=true)
+
+git clone https://github.com/traitimtrongvag/AAn-Ddos-Attack.git
+cd AAn-Ddos-Attack
+sudo apt update
+sudo apt install git python3 python3-pip -y
+pip install pystyle rich
+python ddosv2.py
