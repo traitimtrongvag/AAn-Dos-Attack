@@ -62,9 +62,9 @@ python dosv2.py
 Linux
 ```bash
 git clone https://github.com/traitimtrongvag/AAn-Ddos-Attack.git
-cd AAn-Ddos-Attack
+cd AAn-Dos-Attack
 sudo apt update
 sudo apt install git python3 python3-pip -y
 sh install.sh
-python ddosv2.py
+python dosv2.py
 ```
