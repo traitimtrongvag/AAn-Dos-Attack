@@ -66,5 +66,5 @@ cd AAn-Dos-Attack
 sudo apt update
 sudo apt install git python3 python3-pip -y
 sh install.sh
-python dosv2.py
+python3 dosv2.py
 ```
